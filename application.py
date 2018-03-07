@@ -6,8 +6,8 @@ import requests
 import pymongo
 
 application = Flask(__name__)
-application.secret_key = '2515'
-application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://saumya1510:Password@saumya1510.chykpfxkowj1.us-east-1.rds.amazonaws.com/enerknol'
+application.secret_key = key
+application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:Password@saumya1510.endpoint/enerknol'
 #application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(application)
 
