@@ -64,7 +64,7 @@ def search():
         else:
             return render_template('login.html')
     else:
-        keywords = request.form['search']
+        keywords = request.form['searchQuery']
         es = connectToEs()
         results = es.search(q = keywords)
         resultsList = []
