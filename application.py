@@ -25,8 +25,8 @@ def getCollectionObject(collectionName):
     return
 
 def connectToEs():
-    aws_access_key = 'AKIAJYF633U25D7KXPPA'
-    aws_secret_key = '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'
+    aws_access_key = 'AKIAJIO77KYL36CMZCFA'
+    aws_secret_key = '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'
     region = 'us-east-1'
     service = 'es'
     awsauth = AWS4Auth(aws_access_key, aws_secret_key, region, service)
