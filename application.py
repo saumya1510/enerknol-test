@@ -75,7 +75,7 @@ def search():
             if 'title' in item['_source']:
                 result['title'] = item['_source']['title']
             result['score'] = item['_score']
-            resultsList.applicationend(result)
+            resultsList.append(result)
         return render_template('results.html', results = resultsList)
 
 @application.route('/register', methods = ['GET', 'POST'])
@@ -110,7 +110,7 @@ def login():
             else:
                 return "Username doesn't exist or Password was incorrect"
         except:
-            return "Something bad happlicationened, I think"
+            return "Something bad happened, I think"
 
 @application.route('/logout')
 def logout():
