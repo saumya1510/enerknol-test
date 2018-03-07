@@ -25,12 +25,12 @@ def getCollectionObject(collectionName):
     return
 
 def connectToEs():
-    aws_access_key = 'AKIAJIO77KYL36CMZCFA'
-    aws_secret_key = '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'
+    aws_access_key = aws_access_key
+    aws_secret_key = aws_secret_key
     region = 'us-east-1'
     service = 'es'
     awsauth = AWS4Auth(aws_access_key, aws_secret_key, region, service)
-    host = 'search-enerknol-q-j7dii6sxzn4rfcf6co7kx7gwgy.us-east-1.es.amazonaws.com'
+    host = HOST
     es = Elasticsearch(
         hosts = [{'host': host, 'port': 443}],
         http_auth = awsauth,
