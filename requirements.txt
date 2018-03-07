@@ -6,3 +6,4 @@ flask_sqlalchemy
 elasticsearch
 requests_aws4auth
 gunicorn
+pymysql
