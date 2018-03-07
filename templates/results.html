@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h2>List of Results</h2>
+	<ul class=entries>
+	  {% for result in results %}
+	  	{% if 'title' in result %}
+	    	<li><a href = "{{ url_for('getDetails', objectId = result['id'])}}", target = "_blank"><h2>{{ result['title'] }}</h2></a></li>
+	    {% else %}
+	    	<li><a href = "{{ url_for('getDetails', objectId = result['id'])}}", target = "_blank"><h2>{{ result['main_title'] }} </h2></a></li>
+	    {% endif %}
+	  {% else %}
+	    <li><em>Oops. Nothing on this in the Wikibooks.</em>
+	  {% endfor %}
+	</ul>
+{% endblock %}

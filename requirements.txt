@@ -1,0 +1,7 @@
+Flask
+Jinja2
+pymongo
+requests
+flask_sqlalchemy
+elasticsearch
+requests_aws4auth

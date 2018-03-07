@@ -1,0 +1,12 @@
+<!doctype html>
+<title>EnerKnol</title>
+<div class=page>
+  <h1>EnerKnol</h1>
+  <div class=metanav>
+  {% if 'username' in session %}
+    {{ session['username'] }}
+    <a href="{{ url_for('logout') }}">Log Out</a>
+  {% endif %}
+  </div>
+  {% block body %}{% endblock %}
+</div>
